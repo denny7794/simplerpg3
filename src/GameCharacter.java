@@ -63,6 +63,10 @@ public class GameCharacter implements Cloneable  {
         critMultiplier = 1.2f + (float)(dexterity / 20.0f);
         avoidChance = 8 + (int)(dexterity / 5.0f);
     }
+
+    public void changeStrength(int _strength) {
+        strength += _strength;
+    }
     
     public void showInfo() // Вывод инфо по персонажу
     {
