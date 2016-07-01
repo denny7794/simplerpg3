@@ -42,6 +42,7 @@ public class Hero extends GameCharacter { // Класс "герой" насле�
         myInv = new Inventory();
         myInv.add(new Item("Слабый камень здоровья", Item.ItemType.InfConsumables));
         myInv.add(new Item("Слабое зелье лечения", Item.ItemType.Consumables));
+        myInv.add(new Item("Меч (str+5)", Item.ItemType.Weapon));
         myInv.addSomeCoins(1000);
     }
     
