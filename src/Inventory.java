@@ -34,7 +34,8 @@ public class Inventory {
         System.out.println("0. Закончить осмотр");
         if (inv.size() > 0) {
             for (int i = 0; i < inv.size(); i++) {
-                System.out.println((i + 1) + ". " + inv.get(i).getName());
+                String equip = (inv.get(i).getType() == Item.ItemType.Weapon)?"(e)":"";
+                System.out.println((i + 1) + ". " + inv.get(i).getName() + equip);
             }
         } else {
             System.out.println("Инвентарь пуст");
