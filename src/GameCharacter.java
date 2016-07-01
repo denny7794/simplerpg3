@@ -29,6 +29,7 @@ public class GameCharacter implements Cloneable  {
     protected int level;
     protected int hp;
     protected boolean blockStance;
+    protected boolean busyWeapon;
     protected boolean life;
     public boolean isAlive()
     {
@@ -52,6 +53,7 @@ public class GameCharacter implements Cloneable  {
         hp = hpMax;
         life = true;
         blockStance = false;
+        busyWeapon = false;
     }
     
     public void calculateSecondaryParameters()
@@ -66,6 +68,7 @@ public class GameCharacter implements Cloneable  {
 
     public void changeStrength(int _strength) {
         strength += _strength;
+        calculateSecondaryParameters();
     }
     
     public void showInfo() // Вывод инфо по персонажу
@@ -159,7 +162,16 @@ public class GameCharacter implements Cloneable  {
                 System.out.println(name + " пополнил здоровье на 60 ед.");
                 break;
             case "Меч (str+5)":
-                changeStrength(5);
+                if (!busyWeapon) {
+                    changeStrength(5);
+                    busyWeapon = true;
+                    System.out.println("Герой взял Меч(str+5)");
+                }
+                else {
+                    changeStrength(-5);
+                    busyWeapon = false;
+                    System.out.println("Герой убрал Меч(str+5)");
+                }
                 break;
         }
     }
