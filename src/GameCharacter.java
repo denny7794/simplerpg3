@@ -157,7 +157,10 @@ public class GameCharacter implements Cloneable  {
             case "Слабый камень здоровья":
                 cure(60);
                 System.out.println(name + " пополнил здоровье на 60 ед.");
-                break;  
+                break;
+            case "Меч (str+5)":
+                changeStrength(5);
+                break;
         }
     }
     
