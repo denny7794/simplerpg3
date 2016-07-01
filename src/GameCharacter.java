@@ -105,7 +105,12 @@ public class GameCharacter implements Cloneable  {
     {
         System.out.println("Имя: " + name + " Здоровье: " + hp + "/" + hpMax);
     }
-    
+
+    public void showStats() // Инфо по параметрам персонажа
+    {
+        System.out.println("Сила: " + strength + "/" + base_strength);
+    }
+
     public void setBlockStance() // Включение защитной стойки
     {
         blockStance = true;
