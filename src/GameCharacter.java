@@ -28,43 +28,6 @@ public class GameCharacter implements Cloneable  {
     
     protected int level;
     protected int hp;
-
-    public int getBase_strength() {
-        return base_strength;
-    }
-
-    public int getBase_dexterity() {
-        return base_dexterity;
-    }
-
-    public int getBase_endurance() {
-        return base_endurance;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public int getDexterity() {
-        return dexterity;
-    }
-
-    public int getEndurance() {
-        return endurance;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public int getDefense() {
-        return defense;
-    }
-
-    public int getCritChance() {
-        return critChance;
-    }
-
     protected boolean blockStance;
     protected boolean life;
     public boolean isAlive()
