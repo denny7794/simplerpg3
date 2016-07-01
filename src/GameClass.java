@@ -97,7 +97,7 @@ public class GameClass {
             h.showInfo();
             m.showInfo();
             h.makeNewRound(); // Вызываем метод сброса параметров героя на начало раунда            
-            inpInt = getAction(0, 3, "Ход игрока: 1. Атака 2. Защита 3. Покопаться в сумке 0. Завершить игру");
+            inpInt = getAction(0, 4, "Ход игрока: 1. Атака 2. Защита 3. Покопаться в сумке 4. Параметы героя 0. Завершить игру");
             System.out.print("\n\n"); // Печатаем два символа перевода строки
             if (inpInt == 1) // Герой атакует
             {
@@ -126,6 +126,9 @@ public class GameClass {
                 } else {
                     System.out.println(h.getName() + " просто закрыл сумку");
                 }
+            }
+            if (inpInt == 4) {
+                h.showStats();
             }
             if (inpInt == 0) {
                 break; // Выход из игры
